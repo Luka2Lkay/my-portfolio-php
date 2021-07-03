@@ -1,0 +1,474 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+html{
+    background-image: url('images/working-at-night.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+/* Header*/
+
+.nav_list{
+display: flex;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav_list li{
+    list-style-type: none;  
+}
+
+header nav ul li:first-child{
+    flex:1;
+}
+
+header nav ul li:nth-child(3){
+    margin-right: 50px;
+}
+
+header nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: gold;
+    text-decoration-thickness: 5px;
+}
+
+.active{
+    text-decoration: underline;
+    text-decoration-color: gold;
+    text-decoration-thickness: 5px;
+}
+
+#my_name, #job_title{
+text-align: center;
+color: #fff;
+}
+
+/* Main content */
+
+#projects_button{
+    color: #000;
+    font-weight: 500;
+    margin-left: 45.5%;
+    margin-bottom: 20px;
+}
+
+#projects_button:hover{
+    font-size: 20px;
+    margin-left: 43%;
+}
+
+main{
+    display: none;
+    margin-top: 10px;
+    padding-bottom: 50px;
+    height: auto;
+}
+
+img{
+    width: 320px;
+    height: 200px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projects{
+    margin: 0px 0px 10px 0px;
+    background-color: white;
+    border-radius: 4px;
+    transition: .3s ease box-shadow;
+    padding: 1rem;
+    width: 320px;
+}
+
+.projects:hover{
+    box-shadow: 0px 0px 24px #fff;
+}
+
+#project_links a:first-child{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#project_links a:first-child:hover{
+    border: 1px solid black;
+}
+
+#project_links a:last-child{
+    text-decoration: none;
+    color: white;
+    background-color: maroon;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#project_links a:last-child:hover{
+    border: 1px solid white;
+}
+
+figcaption h2{
+    text-align: center;
+}
+
+.description{
+    text-align: justify;
+    margin: 0 10px 0 10px;
+}
+
+figcaption h3{
+    text-align: center;
+}
+
+.skills{
+    font-family: "New Tegomin", Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+#project_links{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#job_title{
+    color: gold;
+    margin-top: 3rem;
+}
+
+/*Footer*/
+
+footer{
+    display: flex;
+    position: fixed;
+    opacity: 0.8;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    justify-content: space-evenly;
+    background-color: black;
+    align-items: center;
+    
+}
+
+footer a, footer p{
+    color: #fff;
+}
+
+footer a{
+    font-size: 36px;
+}
+
+footer p{
+    font-size: 18px;
+}
+@media only screen and (max-width: 768px){
+    .wrapper{
+        background-position: right;
+    }
+
+     #projects_button{
+        margin-left: 40%;
+    }
+
+    #projects_button:hover{
+        margin-left: 37%;
+    }
+
+    #job_title{
+        color: gold;
+        font-family: "New Tegomin", Georgia, 'Times New Roman', Times, serif; 
+        font-size: 25px;
+    }
+
+    #my_name{
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    #job_title{
+        color: gold;
+        font-size: 25px;
+    
+        text-align: center;
+        margin-top: -15px;
+        font-family: "New Tegomin", Georgia, 'Times New Roman', Times, serif; 
+    }
+
+    #projects_button{
+        margin-left: 30%;
+    }
+
+    #projects_button:hover{
+        margin-left: 29%;
+    }
+
+    #my_name{
+        font-size: 25px;
+        margin-top: 0px;
+    }
+
+    header{
+        margin-top: 10%;
+    }
+
+    .nav_list{
+        display: none;
+        margin-top: -1%;
+    }
+    
+     /*Humburger menu */
+
+     nav{
+        flex-direction: column;
+        margin-right: 150px;
+    }
+    .nav_list.show{
+        display: flex;
+        flex-direction: column;
+    }  
+
+    #burger_menu{
+        display: inline-block;
+        cursor: pointer;
+        margin: 1em 0px 1em -2.5rem;
+    }
+    
+    .top_bar, .middle_bar, .bottom_bar{
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: 0.5s;
+    }
+
+    .change .top_bar{
+       transform: rotate(-45deg) translate(-10px, 10px);
+    } 
+
+    .change .middle_bar{
+        opacity: 0;
+    }
+
+    .change .bottom_bar{
+        transform: rotate(45deg) translate(2px, 0);
+     } 
+}
+
+@media only screen and (max-width: 375px){
+    header nav ul li a{
+        font-size: 18px;
+    }
+
+    img{
+        width: 260px;
+        margin-left: -5px;
+    }
+
+    .projects{
+        width: 250px;
+    }
+
+    footer a{
+        font-size: 15px;
+    }
+
+    .description{
+        width: 200px;
+        font-size: 14px;
+        margin-left: 30px;
+    }
+
+    body{
+        background-position: right;
+    }
+
+    #projects_button{
+        margin-left: 30%;
+    }
+
+    #projects_button:hover{
+        margin-left: 26%;
+    }
+
+    #my_name{
+        margin-top: 20%;
+    }
+
+    header{
+        margin-top: 10%;
+    }
+
+    .nav_list{
+        display: none;
+        margin-top: -1%;
+    }
+
+    #job_title{
+        font-size: 20px;
+    }
+
+    /*Humburger menu */
+
+    nav{
+        flex-direction: column;
+        margin-right: 150px;
+    }
+    .nav_list.show{
+        display: flex;
+        flex-direction: column;
+    }  
+
+    #burger_menu{
+        display: inline-block;
+        cursor: pointer;
+        margin: 1em 0px 1em -2.5rem;
+    }
+    
+    .top_bar, .middle_bar, .bottom_bar{
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: 0.5s;
+    }
+
+    .change .top_bar{
+       transform: rotate(-45deg) translate(-10px, 10px);
+    } 
+
+    .change .middle_bar{
+        opacity: 0;
+    }
+
+    .change .bottom_bar{
+        transform: rotate(45deg) translate(2px, 0);
+     } 
+}
+
+@media only screen and (max-width: 320px){
+
+    .projects{
+        width: 220px;
+        margin-left: 20px;
+    }
+
+    img{
+        width: 240px;
+        margin-left: -10px;
+    }
+    
+    #projects_button{
+        margin-left: 30%;
+    }
+
+    #projects_button:hover{
+        margin-left: 22%;
+    }
+
+    header{
+        margin-top: 10%;
+    }
+    .nav_list li a{
+        font-size: 18px;
+    }
+
+    .description{
+        width: 200px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    body{
+        background-position: top;
+    }
+
+    footer p, footer a{
+        font-size: 15px;
+    }
+
+    #my_name{
+        margin-top: 20%;
+    }
+
+    .nav_list{
+        display: none;
+        margin-top: -1%;
+    } 
+
+    nav{
+        flex-direction: column;
+        margin-right: 200px;
+    }
+    .nav_list.show{
+        display: flex;
+        flex-direction: column;
+    }  
+
+    #job_title{
+        font-size: 15px;
+    }
+
+   
+     /*Humburger menu */
+
+     nav{
+        flex-direction: column;
+        margin-right: 150px;
+    }
+    .nav_list.show{
+        display: flex;
+        flex-direction: column;
+    }  
+
+    #burger_menu{
+        display: inline-block;
+        cursor: pointer;
+        margin: 1em 0px 1em -2.5rem;
+    }
+    
+    .top_bar, .middle_bar, .bottom_bar{
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: 0.5s;
+    }
+
+    .change .top_bar{
+       transform: rotate(-45deg) translate(-10px, 10px);
+    } 
+
+    .change .middle_bar{
+        opacity: 0;
+    }
+
+    .change .bottom_bar{
+        transform: rotate(45deg) translate(2px, 0);
+     } 
+  
+}
