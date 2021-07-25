@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $subject = trim($_POST["subject"]);
     $userMessage = trim($_POST["message"]);
 
-    $myEmail = "lukhanyo@fundza.co.za";
+    $myEmail = "lukhanyo@example.com";  // example.com must not be a gmail acount
     $emailFrom = "From: " . $email;
     $message = "You have received an email from ". $userName. ". \n\n". $userMessage; 
 
